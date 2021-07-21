@@ -17,8 +17,7 @@ of the accident to the traffic authorities or the nearest hospital, countless li
 This project aims to build a system that can instantly detect any road accident occurrence from a
 live feed of CCTV cameras. It will reduce the delay in providing medical aid to the victims of
 road accidents by automatically detecting the accident and informing any relevant authorities
-about it. These pings will accompany a short video clip of the incident. The project will also
-focus on accuracy optimization, i.e. reducing the number of false positives and false negatives.
+about it. These pings will accompany a short video clip of the incident.
 
 ### Progress
 The project is still under development and experimentation. Each of the checked tasks are constantly
