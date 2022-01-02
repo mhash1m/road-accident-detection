@@ -1,5 +1,6 @@
 # Road Accident Detection
 This project is a work in progress.
+Please refer to Accident_Detection Notebook to know more about the Accident Detection approach.
 
 ### Problem Description
 In a report of the World Health Organization (WHO), Approximately 1.35 million fatalities
@@ -29,3 +30,6 @@ being improved while we proceed with the next tasks.
 - [x] Perform object detection on the data set.
 - [x] Build a system to ideally detect road accidents.
 - [x] Perform accident detection on dataset Videos.
+
+## Instructions to Run
+To be added once the project is completed and can be set up easily.
