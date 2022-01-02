@@ -26,6 +26,6 @@ being improved while we proceed with the next tasks.
 - [x] Compile a data set from different sources.
 - [x] Annotate the data set in required format.
 - [x] Build a model to perform obect detection on vehicles(including local vehicles) and people.
-- [ ] Perform object detection on the data set, in real-time.
-- [ ] Build a system to ideally detect road accidents in real-time.
-- [ ] Perform accident detection on dataset streamed in real-time.
+- [x] Perform object detection on the data set.
+- [x] Build a system to ideally detect road accidents.
+- [x] Perform accident detection on dataset Videos.
