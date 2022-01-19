@@ -36,17 +36,27 @@ of the accident to the traffic authorities or the nearest hospital, countless li
 
 Please refer to Accident_Detection Notebook to know more about the Accident Detection approach.
 
-### Results
+## Results
 
-**1. Object Detection Results:**
+### Object Detection Results
+
+** Object Detection MAP (Mean Avg. Precision) and Loss: **
 
 ![](Obj_det_map.jpeg)
 
-**2. Accident Detection Results:**
+### Accident Detection Results
+
+** Confusion Matrix: **
 
 ![](graphs/confusion_matrix.jpg)
 
+
+
+** Epoch-Accuracy: **
+
 ![](graphs/epoch_accuracy.svg)
+
+** Epoch-Loss: **
 
 ![](graphs/epoch_loss.svg)
 
