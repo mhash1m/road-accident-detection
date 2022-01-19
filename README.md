@@ -42,7 +42,7 @@ Please refer to Accident_Detection Notebook to know more about the Accident Dete
 
 ** Object Detection MAP (Mean Avg. Precision) and Loss: **
 
-![](Obj_det_map.jpeg)
+![](graphs/Obj_det_map.jpeg)
 
 ### Accident Detection Results
 
