@@ -75,3 +75,7 @@ Please refer to Accident_Detection Notebook to know more about the Accident Dete
 - Install all the dependencies.
 - Run Accident_Detection.py
 
+## Future Works (Steps to Improve)
+
+- Instead of Object Detection and Localization, work on Accident Localization.
+- Compile even more data for that purpose, the more the merrier.
