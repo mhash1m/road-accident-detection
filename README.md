@@ -40,24 +40,25 @@ Please refer to Accident_Detection Notebook to know more about the Accident Dete
 
 ### Object Detection Results
 
-** Object Detection MAP (Mean Avg. Precision) and Loss: **
+**Object Detection MAP (Mean Avg. Precision) and Loss:**
 
 ![](graphs/Obj_det_map.jpeg)
 
 ### Accident Detection Results
 
-** Confusion Matrix: **
+**Confusion Matrix:**
 
 ![](graphs/confusion_matrix.jpg)
 
 
+**Epoch-Accuracy:**
 
-** Epoch-Accuracy: **
-
+🟠 Train 🔵 Validation
 ![](graphs/epoch_accuracy.svg)
 
-** Epoch-Loss: **
+**Epoch-Loss:**
 
+🟠 Train 🔵 Validation
 ![](graphs/epoch_loss.svg)
 
 ### Dependencies
