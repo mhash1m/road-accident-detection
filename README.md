@@ -44,11 +44,11 @@ Please refer to Accident_Detection Notebook to know more about the Accident Dete
 
 **2. Accident Detection Results:**
 
-![](confusion_matrix.jpg)
+![](graphs/confusion_matrix.jpg)
 
-![](epoch_accuracy.svg)
+![](graphs/epoch_accuracy.svg)
 
-![](epoch_loss.svg)
+![](graphs/epoch_loss.svg)
 
 ### Dependencies
 - Tensorflow 2.0
