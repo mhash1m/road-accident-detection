@@ -37,6 +37,11 @@ of the accident to the traffic authorities or the nearest hospital, countless li
 Please refer to Accident_Detection Notebook to know more about the Accident Detection approach.
 
 ## Results
+Working with Accident data from South-East Asian Countries can be quiet challenging due to the 
+types of vehicles and the congestion of traffic. Sometimes, a frame can contain tens and hundreds of objects.
+Detecting objects and then accidents from such videos can be very difficult with limited resources like us.
+
+There is a lot of room for improvements. Steps to further improve the performance can be found at the last section.
 
 ### Object Detection Results
 
