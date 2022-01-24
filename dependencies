@@ -1,0 +1,22 @@
+Changes in
+preprocessing
+Prediction
+Accident_Detection
+
+
+Dependencies
+
+Python 3.8.10
+
+
+matplotlib==3.4.2
+numpy==1.17.4
+opencv_python==4.5.2.54
+pandas==1.2.5
+Prediction==0.0.3
+preprocessing==0.1.13
+pycocotools==2.0.2
+requests==2.22.0
+tensorflow==2.5.0
+Visualize==0.5.1
+

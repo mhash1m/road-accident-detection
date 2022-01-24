@@ -34,9 +34,13 @@ def augment_horrizontal_flip(train_path):
 
 def preprocess_frames_in_dir(dir, features, masks, start_idx):
   video_names = os.listdir(dir)
+  MAX_SEQ_LENGTH = 30 
+  IMG_SIZE = 120
+  IMG_CHANNELS = 1
   for nth_video, video in enumerate(video_names):
     if os.path.isdir(os.path.join(dir, video)):
       video_path = os.path.join(dir, video)
+      print(video_path)
       video_length = len(os.listdir(video_path))
       length = min(MAX_SEQ_LENGTH, video_length)
       skip_window = math.ceil(video_length/MAX_SEQ_LENGTH)
@@ -49,7 +53,7 @@ def preprocess_frames_in_dir(dir, features, masks, start_idx):
         image_path = os.path.join(video_path, image_names[i])
         img = cv2.imread(image_path)
         gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        print(image_path)
+        #print(image_path)
         resized_img = cv2.resize(gray_img, (IMG_SIZE, IMG_SIZE))
         normalized_img = resized_img/255
         features[start_idx + nth_video, count,] = normalized_img

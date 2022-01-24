@@ -99,7 +99,7 @@ x = Flatten()(x)
 
 output = Dense(1, activation='sigmoid')(x)
 convlstm_model = tf.keras.Model([frame_features_input, mask_input], output)
-# convlstm_model.load_weights("weights/best_weights_AD_val_loss")
+convlstm_model.load_weights("cfg _and_weights/best_weights_AD_val_loss")
 convlstm_model.compile(loss = 'binary_crossentropy', optimizer=Adam(learning_rate = 0.001), metrics=['accuracy'])
 print(convlstm_model.summary())
 
@@ -119,17 +119,17 @@ cp_best_val_acc = ModelCheckpoint(
       filepath + "_val_acc", monitor='val_accuracy', mode = 'max', save_weights_only=True, save_best_only=True, verbose=1
 )
 cp_last_5 = ModelCheckpoint(
-      filepath + "_last_3", save_weights_only=True, save_freq = num_samples_train, verbose=1
+      filepath + "_last_3", save_weights_only=True, save_freq = num_samples_train, verbose=1)
 
 
 ### Train the Model
 
-convlstm_model_training_history = convlstm_model.fit(x = train_data, y = train_labels, epochs = 500, batch_size = 3, 
-                                                    shuffle = True, validation_data = ([val_data[0], val_data[1]], val_labels), 
-                                                    callbacks = [cp_best_val_loss, cp_best_val_acc, cp_last_5, tb_callback])
+# convlstm_model_training_history = convlstm_model.fit(x = train_data, y = train_labels, epochs = 500, batch_size = 3, 
+#                                                     shuffle = True, validation_data = ([val_data[0], val_data[1]], val_labels), 
+#                                                     callbacks = [cp_best_val_loss, cp_best_val_acc, cp_last_5, tb_callback])
 
 ### Test on Test Data
-## Prepare Test Data 
+## Prepare Test Data 	
 
 frame_masks_test = np.zeros(shape=(num_samples_test, MAX_SEQ_LENGTH), dtype="bool")
 frame_features_test = np.zeros(
@@ -145,5 +145,7 @@ print(f"Test accuracy: {round(accuracy * 100, 2)}%")
 
 
 ### PREDICTION
-alert_email = "alertexample@gmail.com"
+vid_path = 'vid6.mp4'
+vid_out_path = 'vid6out.mp4'
+alert_email = "example@gmail.com"
 predict_video(MAX_SEQ_LENGTH, vid_path, vid_out_path, convlstm_model, alert_email)

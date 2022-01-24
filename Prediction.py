@@ -9,12 +9,13 @@ from EmailAlert import send_Alert
 ### Prediction
 ## Read all the frames, perform preprocessing, and perform prediction.
 
-def predict_video(MAX_SEQ_LENGTH, vid_path, vid_out_path, convlstm_model, email)
+def predict_video(MAX_SEQ_LENGTH, vid_path, vid_out_path, convlstm_model, email):
     video_reader = cv2.VideoCapture(vid_path)
-
+    IMG_SIZE = 120
     # Get the width and height of the video.
     original_video_width = int(video_reader.get(cv2.CAP_PROP_FRAME_WIDTH))
     original_video_height = int(video_reader.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    frames_mask = np.ones(shape=(MAX_SEQ_LENGTH), dtype="bool")
 
     # Initialize the VideoWriter Object to store the output video in the disk.
     video_writer = cv2.VideoWriter(vid_out_path, cv2.VideoWriter_fourcc('M', 'P', '4', 'V'), 
@@ -29,7 +30,7 @@ def predict_video(MAX_SEQ_LENGTH, vid_path, vid_out_path, convlstm_model, email)
     predicted_label = ''
 
     # Iterate until the video is accessed successfully.
-    email = False
+    email_sent = False
     acc_frame_count = 0
     while video_reader.isOpened():
 
@@ -65,13 +66,13 @@ def predict_video(MAX_SEQ_LENGTH, vid_path, vid_out_path, convlstm_model, email)
             predicted_labels_probabilities = convlstm_model.predict([np.expand_dims(frames_queue, axis = 0), np.expand_dims(frames_mask, axis = 0)])[0]
 
             if predicted_labels_probabilities < 0.5:
-            acc_frame_count += 1
-            if acc_frame_count >=5 and not email:
-                email = True
+                acc_frame_count += 1
+            if acc_frame_count >=5 and not email_sent:
+                email_sent = True
                 send_Alert(email)
-            predicted_label = f'Accident ({predicted_labels_probabilities})'
+                predicted_label = f'Accident ({predicted_labels_probabilities})'
             else:
-            predicted_label = f'NotAccident ({predicted_labels_probabilities})'
+                predicted_label = f'NotAccident ({predicted_labels_probabilities})'
 
         # Write predicted class name on top of the frame.
         cv2.putText(frame, predicted_label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)

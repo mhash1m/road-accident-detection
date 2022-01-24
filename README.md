@@ -72,13 +72,13 @@ There is a lot of room for improvements. Steps to further improve the performanc
 - darknet
 - Numpy
 
-### Instructions to Run
+### Instructions to Run Inference
 
 - Setup `darknet` by following the guide present [here](https://github.com/AlexeyAB/darknet).
 - Replace the `yolo-obj.cfg`, present in the "cfg and weights" directory, in darknet.
 - Replace the Object Detection weights available [here](https://drive.google.com/file/d/1hfFnNRzGct3yfDR8CaFnJS6i7N-KCedh/view?usp=sharing)
 - Install all the dependencies.
-- Run Accident_Detection.py
+- Run Prediction.py with path to input and output files
 
 ## Future Works (Steps to Improve)
 
