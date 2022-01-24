@@ -45,7 +45,7 @@ There is a lot of room for improvements. Steps to further improve the performanc
 
 ### Object Detection Results
 
-**Object Detection MAP (Mean Avg. Precision) and Loss:**
+**MAP (Mean Avg. Precision) and Loss on Unseen Data:**
 
 ![](graphs/Obj_det_map.jpeg)
 
