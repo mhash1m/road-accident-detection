@@ -1,13 +1,6 @@
-Changes in
-preprocessing
-Prediction
-Accident_Detection
-
-
 Dependencies
 
 Python 3.8.10
-
 
 matplotlib==3.4.2
 numpy==1.17.4
