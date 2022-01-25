@@ -82,5 +82,6 @@ There is a lot of room for improvements. Steps to further improve the performanc
 
 ## Future Works (Steps to Improve)
 
-- Instead of Object Detection and Localization, work on Accident Localization.
+- Segment out vehicles and nearby objects and walls and feed those to LSTM.
 - Compile even more data for that purpose, the more the merrier.
+- Another approach is to work on Accident Localization instead of Object Detection and localization.
